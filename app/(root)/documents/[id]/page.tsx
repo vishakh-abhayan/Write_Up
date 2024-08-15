@@ -18,8 +18,6 @@ const Documents = async ({ params: { id } }: SearchParamProps) => {
 
   const userIds = Object.keys(room.usersAccesses);
   const users = await getClerkUsers({ userIds });
-  console.log(userIds);
-  console.log(users);
 
   const usersData = users.map((user: User) => ({
     ...user,
